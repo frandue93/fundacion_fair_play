@@ -1,0 +1,413 @@
+﻿---
+import Layout from '../layouts/Layout.astro';
+
+const title = 'Fundación Fair Play | Desarrollo y fomento del fútbol base';
+const description =
+'Fundación Fair Play impulsa el desarrollo, la promoción y la integración social a través del fútbol base en Elche y Alicante.';
+
+const areas = [
+{
+title: 'Área de "desarrollo e investigación"',
+copy:
+'Acercamiento del análisis, estudio, formación y desarrollo del conocimiento de la ciencia y su aplicación en el fútbol base, mediante acuerdos con Universidades, Institutos Tecnológicos, Clínicas y Hospitales con especialidades deportivas, Gabinetes de Sicología, etc.',
+image: '/images/source/Fotolia_9021872_S.jpg',
+alt: 'Entrenamiento y formación deportiva vinculados al fútbol base.',
+},
+{
+title: 'Área de "fomento de la práctica deportiva"',
+copy:
+'Facilitar la práctica deportiva mediante la organización de actividades para ejercitar la actividad física con el objetivo de alcanzar una vida saludable y conseguir el afianzamiento de los valores asociados al deporte, para proporcionar a los deportistas una formación de calidad que les sirva para su mejora como personas humanas.',
+image: '/images/source/_DSC6127.JPG',
+alt: 'Actividad de la fundación relacionada con práctica deportiva y acompañamiento.',
+},
+{
+title: 'Área de "promoción"',
+copy:
+'Conseguir la mayor relevancia y transcendencia de la importancia del deporte en general y el fútbol base en particular a través de la difusión y promoción a través de los medios de comunicación disponibles y las nuevas tecnologías para poder conseguir el reconocimiento y reforzar la ilusión por la práctica de su deporte favorito "el fútbol". Asimismo reivindicar la importancia del fútbol base en el proyecto de futuro de nuestro fútbol y futbolistas así como el cuidado, seguimiento, fortalecimiento y sostenibilidad de la ilusión por jugar.',
+image: '/images/source/Fotolia_375367_S.jpg',
+alt: 'Imagen representativa de la promoción y visibilidad del fútbol base.',
+},
+{
+title: 'Área de "integración social"',
+copy:
+'Acercamiento a las zonas más necesitadas y con menos recursos, de un entorno de convivencia en la ciudad donde la práctica del fútbol sea el marco de unión entre ellos. Iniciar y motivar a los participantes en la práctica fuera de los lugares habituales de enseñanza. Facilitar a través de programas financiados mediante acuerdos de colaboración con entidades públicas y privadas la práctica deportiva y la formación necesaria mediante actividades dirigidas a poblaciones necesitadas y con pocos recursos.',
+image: '/images/source/Fotolia_673660_S.jpg',
+alt: 'Escena asociada a deporte, convivencia e integración social.',
+},
+];
+
+const structuredData = {
+'@context': 'https://schema.org',
+'@type': 'NGO',
+name: 'Fundación Fair Play para el Desarrollo y Fomento del Fútbol Base',
+url: 'https://fundacionfairplay.com/',
+logo: 'https://fundacionfairplay.com/images/source/fundacionlogo400.png',
+description,
+telephone: '+34 636 814 117',
+email: 'info@fundacionfairplay.com',
+address: {
+'@type': 'PostalAddress',
+addressLocality: 'Elche',
+addressRegion: 'Alicante',
+addressCountry: 'ES',
+},
+sameAs: [
+'https://www.instagram.com/fundacionfairplayelche/?hl=es',
+'https://www.facebook.com/profile.php?id=61581679662628&locale=es_ES',
+],
+};
+---
+
+<Layout title={title} description={description} image="/images/source/_DSC6127.JPG" structuredData={structuredData}>
+<header class="header-section">
+<div class="header-background"></div>
+<div class="container">
+<div class="header-content">
+<img src="/images/source/fundacionlogo400.png" alt="Logotipo Fundación Fair Play" class="header-logo" width="75" height="75" />
+<div class="header-text">
+<h1>Fundación Fair Play para el Fomento y Desarrollo del Fútbol Base</h1>
+<p>Qué es la Fundación Fair Play</p>
+</div>
+</div>
+</div>
+</header>
+
+<main class="main-content">
+<section class="content-intro">
+<div class="container">
+<div class="intro-grid">
+<div class="intro-column">
+<h2>Qué es la Fundación Fair Play</h2>
+<p>
+La Fundación Fair Play para el Desarrollo y Fomento del Fútbol Base es una organización sin fin
+de lucro, que tiene afectado de modo duradero su patrimonio a la realización de los fines de
+interés general relacionados con el fútbol base.
+</p>
+</div>
+<div class="intro-column">
+<p>
+Son fines de la Fundación Fair Play el fomento, promoción, patrocinio, participación y/o
+colaboración en la organización de todo tipo de actividades deportivas en general, y en
+particular aquellas que tengan que ver con el fútbol en general, y muy especialmente con el
+"fútbol base".
+</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="areas-section" id="areas">
+<div class="container">
+<div class="areas-grid">
+{areas.map((area) => (
+<div class="area-item">
+<h3>{area.title}</h3>
+<p>{area.copy}</p>
+<img src={area.image} alt={area.alt} class="area-image" loading="lazy" />
+</div>
+))}
+</div>
+</div>
+</section>
+
+<section class="commitment-section">
+<div class="container">
+<h2>Comprometidos con el deporte</h2>
+</div>
+</section>
+</main>
+
+<section class="contact-band">
+<div class="container">
+<div class="contact-grid">
+<article class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-phone"></i>
+</div>
+<h3>Telefono</h3>
+<p><a href="tel:+34636814117">636 814 117</a></p>
+</article>
+<article class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-map-marker-alt"></i>
+</div>
+<h3>Dirección</h3>
+<p>Elche (Alicante)</p>
+<div class="social-icons">
+<a href="https://www.instagram.com/fundacionfairplayelche/?hl=es" aria-label="Instagram" rel="noreferrer">
+<i class="fab fa-instagram"></i>
+</a>
+<a href="https://www.facebook.com/profile.php?id=61581679662628&locale=es_ES" aria-label="Facebook" rel="noreferrer">
+<i class="fab fa-facebook-f"></i>
+</a>
+</div>
+</article>
+<article class="contact-item">
+<div class="contact-icon">
+<i class="fas fa-envelope"></i>
+</div>
+<h3>Contacto</h3>
+<p><a href="mailto:info@fundacionfairplay.com">info@fundacionfairplay.com</a></p>
+</article>
+</div>
+</div>
+</section>
+
+<footer class="site-footer">
+<div class="container">
+<p>Fundación Fair Play para el Desarrollo y Fomento del Fútbol Base.</p>
+<a href="mailto:info@fundacionfairplay.com">info@fundacionfairplay.com</a>
+</div>
+</footer>
+</Layout>
+
+<style>
+.header-section {
+position: relative;
+overflow: hidden;
+padding: 4rem 0;
+color: white;
+z-index: 1;
+}
+
+.header-background {
+position: absolute;
+inset: 0;
+background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(221, 0, 51, 0.85) 100%),
+url('/images/source/hero-background.jpg') center/cover;
+z-index: -1;
+}
+
+.header-content {
+display: flex;
+align-items: center;
+gap: 2rem;
+padding: 2rem;
+}
+
+.header-logo {
+flex-shrink: 0;
+}
+
+.header-text h1 {
+margin: 0 0 0.5rem;
+font-size: clamp(1.5rem, 3vw, 2.2rem);
+line-height: 1.3;
+letter-spacing: -0.02em;
+color: #d4d4d4;
+font-weight: 600;
+}
+
+.header-text p {
+margin: 0;
+font-size: 0.95rem;
+color: #ffffff;
+opacity: 0.95;
+}
+
+.main-content {
+background: #ffffff;
+padding: 2rem 0;
+}
+
+.content-intro {
+padding: 2rem 0;
+border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.intro-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 2rem;
+}
+
+.intro-column h2 {
+font-size: 1.5rem;
+margin: 0 0 1rem;
+color: #dd0033;
+}
+
+.intro-column p {
+margin: 0 0 1rem;
+line-height: 1.8;
+color: #666464;
+}
+
+.areas-section {
+padding: 2rem 0;
+}
+
+.areas-grid {
+display: grid;
+grid-template-columns: 1fr 1fr;
+gap: 1.5rem;
+}
+
+.area-item {
+display: flex;
+flex-direction: column;
+}
+
+.area-item h3 {
+font-size: 1.1rem;
+margin: 0 0 0.8rem;
+color: #dd0033;
+line-height: 1.4;
+}
+
+.area-item p {
+font-size: 1rem;
+line-height: 1.8;
+color: #666464;
+margin: 0 0 1rem;
+flex-grow: 1;
+}
+
+.area-image {
+width: 100%;
+height: auto;
+object-fit: cover;
+border-radius: 4px;
+}
+
+.commitment-section {
+padding: 2rem 0;
+text-align: center;
+}
+
+.commitment-section h2 {
+font-size: 1.5rem;
+margin: 0;
+color: #dd0033;
+}
+
+.contact-band {
+background: rgba(221, 0, 51, 0.8);
+color: #ffffff;
+padding: 3rem 0;
+}
+
+.contact-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 2rem;
+text-align: center;
+}
+
+.contact-item {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.contact-icon {
+font-size: 2rem;
+margin-bottom: 1rem;
+color: #ffffff;
+}
+
+.contact-item h3 {
+font-size: 1rem;
+margin: 0 0 0.5rem;
+color: #ffffff;
+font-weight: 700;
+}
+
+.contact-item p {
+margin: 0;
+font-size: 0.95rem;
+font-weight: 700;
+}
+
+.contact-item a {
+color: #ffffff;
+text-decoration: none;
+}
+
+.contact-item a:hover {
+text-decoration: underline;
+}
+
+.social-icons {
+display: flex;
+justify-content: center;
+gap: 1rem;
+margin-top: 1rem;
+}
+
+.social-icons a {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 2.5rem;
+height: 2.5rem;
+border-radius: 50%;
+background: rgba(255, 255, 255, 0.2);
+color: #ffffff;
+transition: background 0.2s;
+}
+
+.social-icons a:hover {
+background: rgba(255, 255, 255, 0.3);
+text-decoration: none;
+}
+
+.social-icons i {
+font-size: 1.2rem;
+}
+
+.site-footer {
+background: #ffffff;
+padding: 1.5rem 0;
+border-top: 1px solid rgba(0, 0, 0, 0.08);
+font-size: 0.9rem;
+}
+
+.site-footer .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 1rem;
+}
+
+.site-footer p {
+margin: 0;
+color: #666464;
+}
+
+.site-footer a {
+color: #666464;
+text-decoration: none;
+}
+
+.site-footer a:hover {
+text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+.header-content {
+flex-direction: column;
+text-align: center;
+}
+
+.intro-grid {
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+
+.areas-grid {
+grid-template-columns: 1fr;
+gap: 1rem;
+}
+
+.contact-grid {
+grid-template-columns: 1fr;
+gap: 1.5rem;
+}
+
+.site-footer .container {
+flex-direction: column;
+text-align: center;
+}
+}
+</style>

@@ -1,0 +1,16 @@
+{
+  "name": "Fundacion Fair Play",
+  "short_name": "Fair Play",
+  "description": "Fundacion dedicada al desarrollo y fomento del futbol base.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f4f0e8",
+  "theme_color": "#0f3b30",
+  "icons": [
+    {
+      "src": "/images/source/fundacionlogo400.png",
+      "sizes": "400x400",
+      "type": "image/png"
+    }
+  ]
+}
